@@ -1,1 +1,1 @@
-My DWM setup v. 0.1
+My DWM setup
