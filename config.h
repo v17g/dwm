@@ -1,4 +1,4 @@
-/* My DWM config */
+/* My DWM config v. 0.1 */
 
 #include <X11/XF86keysym.h>
 
