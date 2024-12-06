@@ -62,6 +62,8 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0";
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_custom, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "kitty", NULL };
+static const char *firefox[] = { "firefox", NULL};
+static const char *telegram[] = { "telegram-desktop", NULL};
 static const char *volumeupcmd[] = { "pamixer", "-i", "10", NULL };
 static const char *volumedowncmd[] = { "pamixer", "-d", "10", NULL };
 static const char *volumemute[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
@@ -78,6 +80,8 @@ static const Key keys[] = {
 	{ 0,                       	XF86XK_AudioMute,              spawn,          {.v = volumemute } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,		XK_b,      spawn,          {.v = firefox } },
+	{ MODKEY|ShiftMask,             XK_t,      spawn,          {.v = telegram } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_Right,  focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_Left,   focusstack,     {.i = -1 } },
@@ -107,10 +111,6 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
 };
 
